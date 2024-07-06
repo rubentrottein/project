@@ -9,4 +9,14 @@ const getAllArticles = async (req, res) =>{
     }
 }
 
-module.exports = { getAllArticles };
+const createArticle = (req, res) =>{
+    try {
+        const newArticle = new ARTICLE();
+        newArticle.title = req.title;
+        res.json({message : "Nouvel article crée" , summary : newArticle});
+    } catch (error) {
+        res.json({message: 'Erreur dans la création d\'un article', error});
+    }
+}
+
+module.exports = { getAllArticles, createArticle };

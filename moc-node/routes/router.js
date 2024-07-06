@@ -1,4 +1,4 @@
-const { getAllArticles } = require("../controllers/ArticleController");
+const { getAllArticles, createArticle } = require("../controllers/ArticleController");
 /** *
 const { getAllUsers, login, logout, sampleUsers, createUser, getUser, deleteUser, updateUser} = require("../controllers/UserController");
 const { getAllMovies, sampleMovies, createMovie, deleteMovie, getMovie, updateMovie} = require("../controllers/MovieController");
@@ -8,6 +8,7 @@ const router = require("express").Router();
 
 //General
 router.get("/articles", getAllArticles)
+router.post("/articles/add", createArticle)
 
 
 /* Index des routes [exemples]*
