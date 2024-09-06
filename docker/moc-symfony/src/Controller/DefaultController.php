@@ -2,16 +2,33 @@
 
 namespace App\Controller;
 
-use App\Entity\Article;
+use App\Service\ArticleApiService;
+use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\Routing\Annotation\Route;
+
+use App\Entity\Article;
 
 class DefaultController extends AbstractController
 {
+
+    public function __construct(private UserRepository $userRepository, ArticleApiService $articleApiService) {
+        $this->articleApiService = $articleApiService;
+        $this->userRepository = $userRepository;
+    }
+    private ArticleApiService $articleApiService;
+
     #[Route('/', name: 'default_home', methods: ['GET'])]
-    public function home() : Response
+    public function home () : Response
     {
+
+        $posts = "Hedgehog";
+
+        return $this->render('default/home.html.twig',
+            ['posts' => $posts]);
+            
+        //Modified controller (toGit)
         $articlesList = [];
         try{
             $articles = file_get_contents('http://localhost:3999/api/school/articles');
@@ -19,9 +36,11 @@ class DefaultController extends AbstractController
             $lastArticle = end($articlesList);
             return $this->render("default/home.html.twig", ['articles' => $articlesList, 'lastArticle'=> $lastArticle]);
         } catch (\Exception $exception) {
-            $error = new Article();
-            $error->title = $exception->getMessage();
-            $articlesList = [$error];
+            //$error = new Article();
+            //$error->title = $exception->getMessage();
+            //$articlesList = [$error];
+            
+            $articlesList = [$exception->getMessage()];
             return $this->render('default/home.html.twig', ["articles" => $articlesList]);
         }
     }
@@ -35,11 +54,24 @@ class DefaultController extends AbstractController
             $lastArticle = end($articlesList);
             return $this->render("default/articles.html.twig", ['articles' => $articlesList, 'lastArticle'=> $lastArticle]);
         } catch (\Exception $exception) {
-            $error = new Article();
-            $error->title = $exception->getMessage();
+            //$error = new Article();
+            //$error->title = $exception->getMessage();
             $articlesList = [$exception->getMessage()];
             return $this->render('default/articles.html.twig', ["articles" => $articlesList]);
         }
     }
 
+    #[Route('/test', name: 'default_test', methods: ['GET'])]
+    public function test () : Response
+    {
+
+        #2
+        //$users = $this-> $userRepository->findAll();
+        $posts = $this->articleApiService->fetchArticles();
+        $testPosts = "Hedgehog";
+
+        return $this->render('default/test.html.twig',
+            ['posts' => $posts]);
+
+    }
 }
