@@ -1,0 +1,48 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-error.log
+.pnpm-debug.log*
+
+# Symfony
+/var/
+/vendor/
+.env
+.env.local
+.env.*.local
+.phpunit.result.cache
+/public/bundles/
+/public/build/
+/public/uploads/
+/public/js/
+/public/css/
+/public/fonts/
+/public/media/
+/public/img/
+/public/favicon.ico
+
+# Cache & Logs
+/var/cache/*
+/var/logs/*
+/var/sessions/*
+/var/test/*
+/var/tmp/*
+
+# Composer
+composer.phar
+
+# IDE / Editor configurations
+/.idea/
+/.vscode/
+/*.iml
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
+
+# Tests
+/tests/bootstrap.php.cache
+
+# Coverage reports
+/coverage/
+/build/
