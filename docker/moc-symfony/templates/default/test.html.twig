@@ -1,0 +1,23 @@
+{% extends "layout.html.twig" %}
+
+{% block content %}
+<section id="postsResume">
+    {% if posts is iterable %}
+        {% for post in posts %}
+            <figure class="post">
+                        <img src={{ post.image }} alt={{post.alt}} />
+                    <figcaption>
+                        <h2>{{ post.title }}</h2>
+                        <small>{{ post._id }}</small>
+                        <i>{{ post.intro }}</i>
+                        <article>{{ post.content }}</article>
+                        <mark>{{ post.category }}</mark>
+                    </figcaption>
+            </figure>
+        {% endfor %}
+    {% else %}
+        <p>Aucun article trouvé.</p>
+    {% endif %}
+</section>
+
+{% endblock %}

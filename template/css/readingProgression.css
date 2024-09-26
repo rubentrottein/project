@@ -1,0 +1,9 @@
+.scroll-bar{
+      background: linear-gradient(to right,
+      aliceblue,steelblue,royalblue);
+      height: 5px;
+      position: fixed;
+      top:0;
+      left: 0;
+      z-index: 3;
+}

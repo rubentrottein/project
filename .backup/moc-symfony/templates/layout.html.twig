@@ -1,0 +1,30 @@
+{% extends "base.html.twig" %}
+
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+{% endblock %}
+
+{% block javascripts %}
+{% endblock %}
+
+{% block body %}
+
+
+    <!-- header-area -->
+    {% include 'components/_header.html.twig' %}
+    <!-- header-area-end
+    <div class="monitor">{# { error } #}</div>
+    -->
+
+    <!-- main-area -->
+    <main class="bg-dark-subtle py-3">
+        {% block content %}
+        {% endblock %}
+    </main>
+    <!-- main-area-end -->
+
+    <!-- footer-area -->
+    {% include 'components/_footer.html.twig' %}
+    <!-- footer-area-end -->
+
+{% endblock %}
