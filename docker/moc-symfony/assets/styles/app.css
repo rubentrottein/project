@@ -51,7 +51,15 @@ main{
     margin: 2em auto;
 }
 /****** Tabs ******/
-
+.monitor{
+    position: fixed;
+    bottom:0;
+    left:0;
+    width: 100dvw;
+    background: rgba(0,0,0,.7);
+    color: lime;
+    font-family: "Courier New", monospace;
+}
 .rounded-tab {
     --r: 10px; /* control the curvature*/
 
@@ -113,6 +121,10 @@ main{
 }
 
 footer{
+    position: fixed;
+    bottom: 0;
+    left:0;
+    width: 100%;
     background: black;
     color: white;
     text-align: center;
@@ -122,20 +134,18 @@ footer{
 /*Test Bibliothèques*/
 
 /*CSSWAND*/
-button {
+button, [type=button] {
     display: inline-block;
-    position: relative;
     color: #1D9AF2;
     background-color: #292D3E;
     border: 1px solid #1D9AF2;
     border-radius: 4px;
-    padding: 0 15px;
+    padding: 0.5em 1em;
+    margin: 1em;
     cursor: pointer;
-    height: 32px;
-    font-size: 14px;
 
 }
-button:active {
+button:active, [type=button]:active {
     box-shadow: 0 3px 0 #1D9AF2;
     top: 3px;
 }
