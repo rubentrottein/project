@@ -1,0 +1,42 @@
+header{
+    background: var(--t-black);
+}
+header nav a{
+    color: var(--title);
+}
+main{
+    place-content: center;
+    width: 50dvw;
+}
+section{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+article{
+    border-radius: 1em;
+    background: var(--t-black);
+    border: 1px solid var(--title);
+    padding: 1em;
+    display: grid;
+    place-content: space-between;
+}
+article div++++++++++++++++++++++++++++++++++++++++++{
+    margin-top: 1em;
+}
+article p{
+    display: flex;
+    justify-content: space-between;
+}
+h2{
+    background: var(--title);
+    text-align: center;
+    padding: .5em;
+}
+img{
+    border-radius: 50%;
+}
+div{
+    display: flex;
+    justify-content: space-between;
+}

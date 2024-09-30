@@ -6,16 +6,11 @@
         <title>UI elements</title>
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/home.css">
+        <script src="js/include.js" defer></script>
     </head>
     <body>
         <header>
             <h1>🦔 Hedgehog School 🦔</h1>
-            <nav>
-                <a href="#home">Home</a>
-                <a href="articles.html">Articles</a>
-                <a href="#profile">Profil</a>
-                <a href="#connexion" class="connexion">Connexion</a>
-            </nav>
         </header>
         <video src="media/1.webm" autoplay muted loop></video>
         <main>
@@ -58,40 +53,5 @@
                 </article>
             </section>
         </main>
-        <section class="modal">
-            <article id="modalContent">
-                <a href="#" class="connexion close">X</a>
-                <h2>Connexion</h2>
-                <form action="">
-                    <label for="email">email
-                        <input type="text" name="email">
-                    </label>
-                    <label for="password">password
-                        <input type="password" name="password">
-                    </label>
-                    <input type="submit" value="Connexion">
-                    <a href="#" id="registerLink">Pas encore inscrit? s'inscrire ici</a>
-                </form>
-            </article>
-        </section>
-        <script>
-            for(let displayButton of document.querySelectorAll(".connexion")){
-                displayButton.addEventListener("click", ()=>{
-                    document.querySelector(".modal").classList.toggle("visible");
-                })
-            }
-
-            //document.querySelector("h1").addEventListener("click", changeVid);
-            document.querySelector("#profile").addEventListener("click", ()=> document.querySelector("video").autoplay = true);
-            let i=2
-            function changeVid(){
-                
-                document.querySelector("video").pause();
-                if(i>9) {i=0}
-                document.querySelector("video").src = i + ".webm";
-
-                i++;
-            }
-        </script>
     </body>
 </html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>UI elements</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/profile.css">
+        <script src="js/include.js" defer></script>
+        <script src="js/profile.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <h1>🦔 Profil de <span class="user flicker"></span>🦔</h1>
+        </header>
+        <main>
+            <section>
+                <article>
+                    <h2>Mon profil</h2>
+                    <img src="https://i.pravatar.cc/150?img=14" alt="photo profil">
+                    <div>
+                        <p>Nom :</p>
+                        <p class="nom"></p>
+                    </div>
+                    <div>
+                        <p>Prénom :</p>
+                        <p class="prenom"></p>
+                    </div>
+                    <div>
+                        <p>Statut :</p>
+                        <p class="statut"></p>
+                    </div>
+                    <div>
+                        <p>Mot de passe :</p>
+                        <p class="password"></p>
+                    </div>
+                </article>
+                <article>
+                    <h2>Modifier mes informations</h2>
+                    <div>
+                        <label>Nom :</label>
+                        <input type="text" name="nom" id="nom">
+                    </div>
+                    <div>
+                        <label>Prénom :</label>
+                        <input type="text" name="prenom" id="prenom">
+                    </div>
+                    <div>
+                        <label>Mot de passe :</label>
+                        <input type="text" name="password" id="password">
+                    </div>
+                    <button>Mettre à jour</button>
+                </article>
+            </section>
+        </main>
+    </body>
+</html>
