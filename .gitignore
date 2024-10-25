@@ -47,3 +47,4 @@ Thumbs.db
 # Coverage reports
 /coverage/
 /build/
+/docker/moc-symfony/vendor
