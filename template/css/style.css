@@ -89,8 +89,13 @@ main{
 .rounded-tab {
   --r: 10px; /* control the curvature*/
 
+
   border-inline: var(--r) solid #0000;
   border-radius: calc(2*var(--r)) calc(2*var(--r)) 0 0/var(--r);
+  mask:
+          radial-gradient(var(--r) at var(--r) 0,#0000 98%,#000 101%)
+          calc(-1*var(--r)) 100%/100% var(--r) repeat-x,
+          conic-gradient(#000 0 0) padding-box;
   mask:
           radial-gradient(var(--r) at var(--r) 0,#0000 98%,#000 101%)
           calc(-1*var(--r)) 100%/100% var(--r) repeat-x,
@@ -113,9 +118,18 @@ main{
   line-height: 1.8; /* control the height */
   padding-inline: .5em;
   background: var(--black);
+.rounded-tab {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 1.1em;
+  font-weight: 100;
+  color: var(--title);
+  line-height: 1.8; /* control the height */
+  padding-inline: .5em;
+  background: var(--black);
 }
 
 #tabs{
+  display: flex;
   display: flex;
 }
 #tabs div{

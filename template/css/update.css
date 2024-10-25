@@ -1,0 +1,101 @@
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    text-decoration: none;
+}
+:root{
+    --white : #fee;
+    --black : #233;
+    --beige : beige;
+    --link : #523bff;
+    --warning : #ca4d1c;
+}
+body>img{
+    width: 100%;
+    object-fit: cover;
+}
+header{
+    position: fixed;
+    width: 100dvh;
+    background: linear-gradient(to right, black, transparent);
+    padding: .5em;
+    color: var(--white);
+}
+header a {
+    margin: 0 1em;
+    color: var(--warning);
+}
+a{
+    color: var(--link);
+}
+main{
+    padding: 1em;
+    width: 80%;
+    margin: 2em auto;
+}
+/****** Tabs ******/
+
+.rounded-tab {
+    --r: 10px; /* control the curvature*/
+
+    border-inline: var(--r) solid #0000;
+    border-radius: calc(2*var(--r)) calc(2*var(--r)) 0 0/var(--r);
+    mask:
+            radial-gradient(var(--r) at var(--r) 0,#0000 98%,#000 101%)
+            calc(-1*var(--r)) 100%/100% var(--r) repeat-x,
+            conic-gradient(#000 0 0) padding-box;
+}
+.rounded-tab.left {
+    border-left-width: 0;
+    border-top-left-radius: var(--r);
+}
+.rounded-tab.right {
+    border-right-width: 0;
+    border-top-right-radius: var(--r);
+}
+
+.rounded-tab {
+    font-family: system-ui, sans-serif;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: var(--black);
+    line-height: 1.8; /* control the height */
+    padding-inline: .5em;
+    background: black;
+    color: skyblue;
+}
+
+#tabs{
+    display: flex;
+}
+#tabs div{
+    position: relative;
+    z-index: -1;
+}
+
+#tabs div:hover{ z-index: 2;}
+#tabs div:nth-child(2){left: -1vw;}
+#tabs div:nth-child(3){left: -2vw;}
+#tabs div .active{z-index: 1;}
+
+/****** Intro des chapitres ******/
+#articleHeader{
+    border: 1px solid white;
+    border-radius: 10px;
+}
+#articleHeader, #articleHeader article{
+    display: flex;
+    justify-content: space-between;
+}
+#articleHeader>div{
+    padding: 2em;
+    max-width: 45%;
+    border-right: 1px solid white;
+}
+#articleHeader .miniatures video{
+    max-width: 12%;
+}
+
+img{
+    max-width: 90%;
+}

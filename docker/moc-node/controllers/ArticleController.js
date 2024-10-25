@@ -19,7 +19,7 @@ const getArticleById = async ( req, res ) =>{
 }
 const deleteArticle = async (req, res) => {
     try {
-        const articleId = req.params.id; // Supposez que l'ID de l'article soit passé dans les paramètres de l'URL
+        const articleId = req.params.id; // ID de l'article passé dans les paramètres de l'URL
         const deletedArticle = await ARTICLE.findByIdAndDelete(articleId);
 
         if (!deletedArticle) {
