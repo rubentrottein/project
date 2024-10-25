@@ -1,0 +1,30 @@
+
+/* Formulaire de connexion */
+body{
+    display: grid;
+    place-content: center;
+    height:100dvh;
+    background: url("https://picsum.photos/1980/1280") fixed no-repeat;
+    background-size: cover;
+}
+form {
+    padding: 1em;
+    background: rgba(0,0,0,.4);
+    border-radius: 1em;
+    border: 1px solid gold;
+    box-shadow: 0 0 15px black;
+    backdrop-filter: blur(15px);
+    color: white;
+    width: 60dvw;
+    text-align: center;
+}
+label, input{
+    display: block;
+    margin: 1em auto;
+}
+.checkbox{
+    display: flex;
+    justify-content: space-around;
+    width: 15%;
+    margin: auto;
+}

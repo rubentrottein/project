@@ -5,30 +5,34 @@ namespace App\Controller;
 use App\Service\ArticleApiService;
 use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Bundle\SecurityBundle\Security;
+
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-
-use App\Entity\Article;
-
 class DefaultController extends AbstractController
 {
-
-    public function __construct(private UserRepository $userRepository, ArticleApiService $articleApiService) {
+    public function __construct(UserRepository $userRepository, ArticleApiService $articleApiService) {
         $this->articleApiService = $articleApiService;
         $this->userRepository = $userRepository;
     }
-    private ArticleApiService $articleApiService;
+    public ArticleApiService $articleApiService;
 
-    #[Route('/', name: 'default_home', methods: ['GET'])]
-    public function home (Security $security) : Response
+    #[Route('/home', name: 'default_home', methods: ['GET'])]
+    public function home () : Response
     {
 
-        $posts = "Hedgehog";
-
+        #2
+        //$users = $this-> $userRepository->findAll();
+        $posts = $this->articleApiService->fetchArticles();
+        $message = ['content' => 'Message Flash', 'type' => "success"];
         return $this->render('default/home.html.twig',
-            ['posts' => $posts]);
+            ['posts' => $posts, 'message' => $message, 'article' => $posts[0]]
+        );
+
+    }
             
+    #[Route('/', name: 'default_landing', methods: ['GET'])]
+    function landing (SecurityController $security) : Response
+    {
         //Modified controller (toGit)
         $articlesList = [];
         try{
@@ -73,15 +77,15 @@ class DefaultController extends AbstractController
         #2
         //$users = $this-> $userRepository->findAll();
         $posts = $this->articleApiService->fetchArticles();
-        $testPosts = "Hedgehog";
 
         return $this->render('default/test.html.twig',
             ['posts' => $posts]);
 
     }
+    
 
     #[Route('/profile', name: 'user_test', methods: ['GET'])]
-    public function test () : Response
+    public function profile () : Response
     {
 
         #2
