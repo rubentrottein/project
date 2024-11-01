@@ -1,24 +1,36 @@
 {% extends 'base.html.twig' %}
+
 {% block title %}Hedgehog School{% endblock %}
-{% block final_stylesheets %}
+{% block stylesheets %}
+    <link rel="stylesheet" href="{{asset('assets/styles/app.css')}}">
     <link rel="stylesheet" href="{{asset('assets/styles/home.css')}}">
 {% endblock %}
+{% block final_javascripts %}
+    <script src="{{ asset('assets/scripts/bgVideoChanger.js') }}" defer></script>
+{% endblock %}
+{% block bgvideo %}
+    <video autoplay muted loop>
+        <source src="{{ asset('media/bg.mp4') }}" type="video/mp4">
+        <source src="{{ asset('media/bg.webm') }}" type="video/webm">
+        Votre navigateur ne supporte pas les vidéos HTML5.
+    </video>
+{% endblock %}
+{% block banner %}{% endblock %}
 {% block content %}
-    <video src="media/1.webm" autoplay muted loop></video>
+    <section id="hero">
+        <h1>Bienvenue</h1>
+        <article>
+            <p>Apprendre</p>
+            <p>Savoir</p>
+            <p>Transmettre</p>
+        </article>
+        <button>S'inscrire</button>
+        <a href="#search">Chercher un cours</a>
+    </section>
     <main>
-        <section id="hero">
-            <h1>Des tutos et cours pour tout</h1>
-            <article>
-                <p>Apprendre</p>
-                <p>Savoir</p>
-                <p>Transmettre</p>
-            </article>
-            <button>S'inscrire</button>
-            <a href="#search">Chercher un cours</a>
-        </section>
-        <section>
+        <section class="accordion">
             <h2>Nos derniers cours</h2>
-            <article>
+            <article class="content hidden">
                 <h3>Slider</h3>
                 <aside id="slider">
                     <a href="#2">
@@ -45,20 +57,4 @@
             </article>
         </section>
     </main>
-    <section class="modal">
-        <article id="modalContent">
-            <a href="#" class="connexion close">X</a>
-            <h2>Connexion</h2>
-            <form action="">
-                <label for="email">email
-                    <input type="text" name="email">
-                </label>
-                <label for="password">password
-                    <input type="password" name="password">
-                </label>
-                <input type="submit" value="Connexion">
-                <a href="#" id="registerLink">Pas encore inscrit? s'inscrire ici</a>
-            </form>
-        </article>
-    </section>
 {% endblock %}

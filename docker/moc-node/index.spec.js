@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const { startServer } = require('./index.js');
+const { connectDB } = require('./config/db_config.js');
 
 describe('MongoDB Connection and Server Startup', () => {
     let server;
@@ -12,7 +13,7 @@ describe('MongoDB Connection and Server Startup', () => {
     });
 
     test('devrait se connecter à MongoDB et démarrer le serveur', async () => {
-        server = await startServer();  // Démarre le serveur
+        server = await connectDB();  // Démarre le serveur
         expect(server).toBeTruthy();  // Vérifie que le serveur est démarré
     });
 
@@ -20,6 +21,6 @@ describe('MongoDB Connection and Server Startup', () => {
         jest.spyOn(mongoose, 'connect').mockImplementationOnce(() => {
             throw new Error("Échec de connexion à MongoDB");
         });
-        await expect(startServer()).rejects.toThrow("Échec de connexion à MongoDB");
+        await expect(connectDB()).rejects.toThrow("Échec de connexion à MongoDB");
     });
 });

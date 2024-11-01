@@ -14,6 +14,13 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
@@ -310,6 +317,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\SecondarySSD\2024_projet\docker\moc-symfony" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\SecondarySSD\2024_projet\docker\moc-symfony\public\assets" />
+    </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -332,10 +342,22 @@
       <workItem from="1729861347491" duration="121000" />
       <workItem from="1729861538926" duration="607000" />
       <workItem from="1729862259784" duration="1030000" />
+      <workItem from="1730111501457" duration="41307000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/templates/landing.html.twig</url>
+          <line>1</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

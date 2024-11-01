@@ -171,6 +171,17 @@ $catalogue = new MessageCatalogue('da', array (
     'Too many failed login attempts, please try again in %minutes% minute.' => 'For mange mislykkede loginforsøg. Prøv venligst igen om %minutes% minut.',
     'Too many failed login attempts, please try again in %minutes% minutes.' => 'For mange mislykkede loginforsøg, prøv igen om %minutes% minutter.',
   ),
+  'VerifyEmailBundle' => 
+  array (
+    '%count% year|%count% years' => '%count% år|%count% år',
+    '%count% month|%count% months' => '%count% måned|%count% måneder',
+    '%count% day|%count% days' => '%count% dag|%count% dage',
+    '%count% hour|%count% hours' => '%count% time|%count% timer',
+    '%count% minute|%count% minutes' => '%count% minut|%count% minutter',
+    'The link to verify your email has expired. Please request a new link.' => 'Linket til at bekræfte din e-mail er udløbet. Venligst anmod om et nyt link.',
+    'The link to verify your email is invalid. Please request a new link.' => 'Linket til at bekræfte din e-mail er ugyldigt. Venligst anmod om et nyt link.',
+    'The link to verify your email appears to be for a different account or email. Please request a new link.' => 'Linket til at bekræfte din e-mail ser ud til at være til en anden konto eller e-mail. Venligst anmod om et nyt link.',
+  ),
 ));
 
 $catalogueEn = new MessageCatalogue('en', array (
@@ -286,6 +297,12 @@ $catalogueEn = new MessageCatalogue('en', array (
     'The detected character encoding is invalid ({{ detected }}). Allowed encodings are {{ encodings }}.' => 'The detected character encoding is invalid ({{ detected }}). Allowed encodings are {{ encodings }}.',
     'This value is not a valid MAC address.' => 'This value is not a valid MAC address.',
     'This URL is missing a top-level domain.' => 'This URL is missing a top-level domain.',
+    'This value is too short. It should contain at least one word.|This value is too short. It should contain at least {{ min }} words.' => 'This value is too short. It should contain at least one word.|This value is too short. It should contain at least {{ min }} words.',
+    'This value is too long. It should contain one word.|This value is too long. It should contain {{ max }} words or less.' => 'This value is too long. It should contain one word.|This value is too long. It should contain {{ max }} words or less.',
+    'This value does not represent a valid week in the ISO 8601 format.' => 'This value does not represent a valid week in the ISO 8601 format.',
+    'This value is not a valid week.' => 'This value is not a valid week.',
+    'This value should not be before week "{{ min }}".' => 'This value should not be before week "{{ min }}".',
+    'This value should not be after week "{{ max }}".' => 'This value should not be after week "{{ max }}".',
     'This form should not contain extra fields.' => 'This form should not contain extra fields.',
     'The uploaded file was too large. Please try to upload a smaller file.' => 'The uploaded file was too large. Please try to upload a smaller file.',
     'The CSRF token is invalid. Please try to resubmit the form.' => 'The CSRF token is invalid. Please try to resubmit the form.',

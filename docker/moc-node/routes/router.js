@@ -3,7 +3,7 @@ const router = require("express").Router()
 
 //General
 router.get("/articles", getAllArticles)
-router.get("/articles/get", getArticleById)
+router.get("/article/:id", getArticleById)
 router.post("/articles/add", createArticle)
 router.delete("/articles/delete/:id", deleteArticle)
 

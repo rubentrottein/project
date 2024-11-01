@@ -14,15 +14,15 @@ return [
         '/_profiler/phpinfo' => [[['_route' => '_profiler_phpinfo', '_controller' => 'web_profiler.controller.profiler::phpinfoAction'], null, null, null, false, false, null]],
         '/_profiler/xdebug' => [[['_route' => '_profiler_xdebug', '_controller' => 'web_profiler.controller.profiler::xdebugAction'], null, null, null, false, false, null]],
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
-        '/home' => [[['_route' => 'default_home', '_controller' => 'App\\Controller\\DefaultController::home'], null, ['GET' => 0], null, false, false, null]],
-        '/' => [[['_route' => 'default_landing', '_controller' => 'App\\Controller\\DefaultController::landing'], null, ['GET' => 0], null, false, false, null]],
-        '/articles' => [[['_route' => 'default_articles', '_controller' => 'App\\Controller\\DefaultController::articles'], null, ['GET' => 0], null, false, false, null]],
-        '/test' => [[['_route' => 'default_test', '_controller' => 'App\\Controller\\DefaultController::test'], null, ['GET' => 0], null, false, false, null]],
-        '/profile' => [[['_route' => 'user_test', '_controller' => 'App\\Controller\\DefaultController::profile'], null, ['GET' => 0], null, false, false, null]],
+        '/articles' => [[['_route' => 'default_articles', '_controller' => 'App\\Controller\\ArticleController::articles'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/test' => [[['_route' => 'default_test', '_controller' => 'App\\Controller\\ArticleController::test'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/home' => [[['_route' => 'default_home', '_controller' => 'App\\Controller\\DefaultController::home'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/' => [[['_route' => 'default_landing', '_controller' => 'App\\Controller\\DefaultController::landing'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
         '/verify/email' => [[['_route' => 'app_verify_email', '_controller' => 'App\\Controller\\RegistrationController::verifyUserEmail'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
+        '/profile' => [[['_route' => 'user_profile', '_controller' => 'App\\Controller\\UserController::profile'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
     ],
     [ // $regexpList
         0 => '{^(?'
@@ -44,6 +44,7 @@ return [
                         .')'
                     .')'
                 .')'
+                .'|/article/([^/]++)(*:219)'
             .')/?$}sDu',
     ],
     [ // $dynamicRoutes
@@ -54,8 +55,9 @@ return [
         148 => [[['_route' => '_profiler_router', '_controller' => 'web_profiler.controller.router::panelAction'], ['token'], null, null, false, false, null]],
         168 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         181 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
-        191 => [
-            [['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null],
+        191 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
+        219 => [
+            [['_route' => 'article_get_one', '_controller' => 'App\\Controller\\ArticleController::getArticleById'], ['id'], ['GET' => 0], null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],
