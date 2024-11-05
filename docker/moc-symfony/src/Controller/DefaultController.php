@@ -30,19 +30,22 @@ class DefaultController extends AbstractController
 
     }
             
-    #[Route('/', name: 'default_landing', methods: ['GET', 'POST'])]
+    #[Route('/', name: 'default_landing', methods: ['GET'])]
     function landing (SecurityController $security) : Response
     {
         //Modified controller (toGit)
-        $articlesList = [];
+        $articles = file_get_contents('http://localhost:3999/api/school/articles');
+        $articlesList = json_decode($articles, true);
+        $lastArticle = end($articlesList);
         try{
             if ($security->getUser()) {
-                $articles = file_get_contents('http://localhost:3999/api/school/articles');
                 $articlesList = json_decode($articles, true);
                 $lastArticle = end($articlesList);
-                return $this->render("default/home.html.twig", ['articles' => $articlesList, 'lastArticle'=> $lastArticle]);
+                return $this->render("default/home.html.twig", ['all_content' => $articlesList, 'lastArticle'=> $lastArticle]);
             } else {
-                return $this->render("landing.html.twig");
+                //Mise à disposition des 5 derniers articles (démo sans connexion)
+
+                return $this->render("landing.html.twig", ['all_content' => $articlesList]);
             }
         } catch (\Exception $exception) {
             //$error = new Article();
@@ -50,7 +53,7 @@ class DefaultController extends AbstractController
             //$articlesList = [$error];
 
             $articlesList = [$exception->getMessage()];
-            return $this->render('landing.html.twig');
+            return $this->render('landing.html.twig', ['all_content' => $articlesList]);
         }
     }
 }

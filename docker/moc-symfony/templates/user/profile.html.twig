@@ -1,28 +1,12 @@
 {% extends "layout.html.twig" %}
-
+{% block final_stylesheets%}
+    <link rel="stylesheet" href="{{ asset('assets/styles/login.css') }}" />
+{% endblock %}
 {% block content %}
     <section id="profile">
         <h2>Utilisateur actuel : {{ app.user.username }}</h2>
         <p>
-
-            {{ dump(app.user) }}
-
+            {{ form(form) }}
         </p>
-        <ul>
-
-            {#
-            #}
-            {% for prop in app.user %}
-                <li>{{ dump(user.prop) }}</li>
-            {% endfor %}
-        </ul>
-        <ul>
-            {#
-
-            {% for user in admin_users %}
-                <li>{{ dump(user.username) }}</li>
-            {% endfor %}
-            #}
-        </ul>
     </section>
 {% endblock %}

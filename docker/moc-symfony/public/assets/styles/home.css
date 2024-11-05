@@ -1,6 +1,8 @@
 *{
-    overflow-x: hidden;
     scroll-behavior: smooth;
+}
+:root{
+    --pure-glass : radial-gradient(rgba(255,255,255,.1), lightsteelblue);
 }
 video{
     z-index: -1;
@@ -28,12 +30,43 @@ nav a{
 /************ Call To action ***********/
 #hero{
     position: absolute;
-    top: 60vh;
-    left: 5vw;
-    background: var(--transparent-black);
+    inset:25%;
+    width: 50dvw;
+    height: 50dvh;
+    background: var(--pure-glass);
+    color: var(--black);
     backdrop-filter: blur(10px);
     padding: 1.5em;
-    line-height: 1.5em;
+    display: grid;
+    place-items: center;
+    border-radius: 1em;
+    border: white solid 1px;
+}
+#hero p{
+    font-size: 3em;
+    transform: translateX(-100dvw);
+    animation: fadeIn 1s 1s forwards ease;
+    color: var(--white);
+}
+#hero p:nth-child(2){margin-left: 4em; animation: fadeIn 1s 2s forwards ease; color: var(--beige);}
+#hero p:nth-child(3){margin-left: 6em; animation: fadeIn 1s 3s forwards ease; color: var(--transparent-white);}
+#hero .buttons{
+    display: flex;
+    gap: 1em;
+}
+#hero button, #hero [type=button]{
+    border-radius: .5em;
+    padding: 1em;
+    color: var(--white);
+    border: 1px solid var(--white);
+}
+@keyframes fadeIn{
+    from{
+        transform: translateX(-100dvw);
+    } to {
+        transform: translateX(0);
+    }
+
 }
 /************ Site vitrine ***********/
 main{
@@ -48,18 +81,34 @@ main{
 #slider{
 
 }
-/********************** Slider de cours suggérés ******************************
+/********************** Slider de cours suggérés ******************************/
 
 #slider{
     display: flex;
     width: 400dvw;
     overflow-x: hidden;
     justify-content: space-around;
-    height: 50dvh;
+    height: 60dvh;
 }
 #slider img{
     object-fit: cover;
-    width: 100%;
+    height: 50vh;
+}
+#slider a{
+    color:var(--white);
 }
 
-
+/* accordion */
+.accordion{
+    display: grid;
+    padding: 1.5em;
+    cursor:pointer;
+    transition: 160ms ease;
+}
+.accordion .hidden{
+    overflow: hidden;
+}
+.open{
+    display: grid;
+    grid-template-rows: 1.5em 1fr;
+}

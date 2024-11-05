@@ -17,7 +17,7 @@ return [
         '/articles' => [[['_route' => 'default_articles', '_controller' => 'App\\Controller\\ArticleController::articles'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/test' => [[['_route' => 'default_test', '_controller' => 'App\\Controller\\ArticleController::test'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/home' => [[['_route' => 'default_home', '_controller' => 'App\\Controller\\DefaultController::home'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
-        '/' => [[['_route' => 'default_landing', '_controller' => 'App\\Controller\\DefaultController::landing'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/' => [[['_route' => 'default_landing', '_controller' => 'App\\Controller\\DefaultController::landing'], null, ['GET' => 0], null, false, false, null]],
         '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
         '/verify/email' => [[['_route' => 'app_verify_email', '_controller' => 'App\\Controller\\RegistrationController::verifyUserEmail'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],

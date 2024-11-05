@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a96d6abf-c97b-4318-8972-390d80279dca" name="Changes" comment="" />
+    <list default="true" id="a96d6abf-c97b-4318-8972-390d80279dca" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../documentation/Dossier projet dan.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../documentation/Dossier projet dan.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../documentation/~$ssier projet dan.docx" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -298,23 +301,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev-october&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/SecondarySSD/2024_projet/docker/moc-symfony&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "dev-october",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/SecondarySSD/2024_projet/docker/moc-symfony/public/assets",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\SecondarySSD\2024_projet\docker\moc-symfony\public\assets" />
       <recent name="D:\SecondarySSD\2024_projet\docker\moc-symfony" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -343,6 +347,7 @@
       <workItem from="1729861538926" duration="607000" />
       <workItem from="1729862259784" duration="1030000" />
       <workItem from="1730111501457" duration="41307000" />
+      <workItem from="1730669696350" duration="17278000" />
     </task>
     <servers />
   </component>

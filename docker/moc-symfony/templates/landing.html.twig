@@ -10,49 +10,62 @@
 {% endblock %}
 {% block bgvideo %}
     <video autoplay muted loop>
-        <source src="{{ asset('media/bg.mp4') }}" type="video/mp4">
-        <source src="{{ asset('media/bg.webm') }}" type="video/webm">
+        <!--<source src="{{ asset('media/bg.mp4') }}" type="video/mp4">-->
+        <source src="{{ asset('media/1399970531860.webm.webm') }}" type="video/webm">
         Votre navigateur ne supporte pas les vidéos HTML5.
     </video>
 {% endblock %}
 {% block banner %}{% endblock %}
 {% block content %}
     <section id="hero">
-        <h1>Bienvenue</h1>
         <article>
             <p>Apprendre</p>
             <p>Savoir</p>
             <p>Transmettre</p>
         </article>
-        <button>S'inscrire</button>
-        <a href="#search">Chercher un cours</a>
+        <article class="buttons">
+            <a type="button" href="/{{ path('app_register') }}">S'inscrire</a>
+            <a type="button" href="/{{ path('app_login') }}">Se connecter</a>
+        </article>
+        <a href="#slider">Chercher un cours</a>
     </section>
     <main>
         <section class="accordion">
             <h2>Nos derniers cours</h2>
+            <form action="{{ path('default_articles') }}">
+                <input type="search" name="" id="search" placeholder="Chercher un cours">
+                <input type="submit" value="Chercher">
+            </form>
             <article class="content hidden">
                 <h3>Slider</h3>
+                        {{ dump(all_content) }}
                 <aside id="slider">
                     <a href="#2">
-                        <img id='1' src="https://picsum.photos/id/18/1980/1280" alt="Image d'illustration">
-                        <h4>Titre du cours</h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa ex, obcaecati saepe consectetur, illo dolorem iste numquam doloremque maiores beatae pariatur voluptatem libero consequuntur inventore.</p>
-                    </a>
-                    <a href="#3">
-                        <img id='2' src="https://picsum.photos/id/111/1980/1280" alt="Image d'illustration">
-                        <h4>Titre du cours</h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa ex, obcaecati saepe consectetur, illo dolorem iste numquam doloremque maiores beatae pariatur voluptatem libero consequuntur inventore.</p>
-                    </a>
-                    <a href="#4">
-                        <img id='3' src="https://picsum.photos/id/213/1980/1280" alt="Image d'illustration">
-                        <h4>Titre du cours</h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa ex, obcaecati saepe consectetur, illo dolorem iste numquam doloremque maiores beatae pariatur voluptatem libero consequuntur inventore.</p>
+                        {#
+                        <img id='1' src="{{  articles[0]image }}" alt="Image d'illustration">
+                        <h4>{{ articles[0]["title"] }}</h4>
+                        <p>{{  articles[0]["intro"] }}</p>
+                        #}
                     </a>
                     <a href="#1">
-                        <img id='4' src="https://picsum.photos/id/33/1980/1280" alt="Image d'illustration">
-                        <h4>Titre du cours</h4>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa ex, obcaecati saepe consectetur, illo dolorem iste numquam doloremque maiores beatae pariatur voluptatem libero consequuntur inventore.</p>
+                        {#
+                        <img id='2' src="{{  articles[1]["image"] }}" alt="Image d'illustration">
+                        <h4>{{ articles[1]["title"] }}</h4>
+                        <p>{{  articles[1]["intro"] }}</p>
+                        #}
                     </a>
+                    {#
+                    <a href="#4">
+                        <img id='3' src="{{  articles[2].image }}" alt="Image d'illustration">
+                        <h4>{{ articles[2].title }}</h4>
+                        <p>{{  articles[2].image }}</p>
+                    </a>
+                    <a href="#1">
+                        <img id='4' src="{{  articles[3].image }}" alt="Image d'illustration">
+                        <h4>{{ articles[3].title }}</h4>
+                        <p>{{  articles[3].image }}</p>
+                    </a>
+                    #}
                 </aside>
             </article>
         </section>

@@ -369,20 +369,3 @@ button:active {
 .visible{
     display: grid;
 }
-
-
-/* accordion */
-.accordion{
-    display: grid;
-    padding: 1.5em;
-    cursor:pointer;
-    grid-template-rows: 1.5em 0fr;
-    transition: 160ms ease;
-}
-.accordion .hidden{
-    overflow: hidden;
-}
-.open{
-    display: grid;
-    grid-template-rows: 1.5em 1fr;
-}
