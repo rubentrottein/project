@@ -11,6 +11,10 @@
     --transparent-black: rgba(0,0,0,0.6);
     --transparent-white: rgba(255,255,255,0.6);
 }
+body{
+    background-color: var(--white);
+    color: var(--black);
+}
 mark{
     background: var(--beige);
     padding: 1px;
@@ -27,6 +31,7 @@ header{
     backdrop-filter: blur(15px);
     width: 100%;
     margin: auto;
+    z-index: 1;
 }
 header>*{
     padding: 0 1em;
@@ -368,4 +373,27 @@ button:active {
 }
 .visible{
     display: grid;
+}
+
+/********** Custom Scrollbar ***********/
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: linear-gradient(black, steelblue);
+    border-radius: 1em;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 1em;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: steelblue;
 }

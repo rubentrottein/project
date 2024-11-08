@@ -1,8 +1,10 @@
 {% extends 'layout.html.twig' %}
 {% block content %}
     {% block title %}Connexion{% endblock %}
-    {% block final_stylesheets %}{% endblock %}
-
+    {% block final_stylesheets %}
+        <link rel="stylesheet" href="{{ asset('assets/styles/app.css') }}">
+        <link rel="stylesheet" href="{{ asset('assets/styles/login.css') }}">
+    {% endblock %}
     {% block body %}
 
         <form method="post" action="{{ path('app_login') }}">

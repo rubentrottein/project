@@ -24,48 +24,35 @@
             <p>Transmettre</p>
         </article>
         <article class="buttons">
-            <a type="button" href="/{{ path('app_register') }}">S'inscrire</a>
-            <a type="button" href="/{{ path('app_login') }}">Se connecter</a>
+            <a type="button" href="{{ path('app_register') }}">S'inscrire</a>
+            <a type="button" href="{{ path('app_login') }}">Se connecter</a>
         </article>
         <a href="#slider">Chercher un cours</a>
     </section>
     <main>
         <section class="accordion">
-            <h2>Nos derniers cours</h2>
+            <h2 class="trigger">Nos derniers cours</h2>
             <form action="{{ path('default_articles') }}">
                 <input type="search" name="" id="search" placeholder="Chercher un cours">
                 <input type="submit" value="Chercher">
             </form>
-            <article class="content hidden">
-                <h3>Slider</h3>
-                        {{ dump(all_content) }}
+            <article class="content">
                 <aside id="slider">
-                    <a href="#2">
-                        {#
-                        <img id='1' src="{{  articles[0]image }}" alt="Image d'illustration">
-                        <h4>{{ articles[0]["title"] }}</h4>
-                        <p>{{  articles[0]["intro"] }}</p>
-                        #}
-                    </a>
-                    <a href="#1">
-                        {#
-                        <img id='2' src="{{  articles[1]["image"] }}" alt="Image d'illustration">
-                        <h4>{{ articles[1]["title"] }}</h4>
-                        <p>{{  articles[1]["intro"] }}</p>
-                        #}
-                    </a>
-                    {#
-                    <a href="#4">
-                        <img id='3' src="{{  articles[2].image }}" alt="Image d'illustration">
-                        <h4>{{ articles[2].title }}</h4>
-                        <p>{{  articles[2].image }}</p>
-                    </a>
-                    <a href="#1">
-                        <img id='4' src="{{  articles[3].image }}" alt="Image d'illustration">
-                        <h4>{{ articles[3].title }}</h4>
-                        <p>{{  articles[3].image }}</p>
-                    </a>
-                    #}
+                    {% for article in articlesList|slice(0,3) %}
+                        {% if(loop.index>= 2) %}
+                        <a href="#1">
+                            <img id='{{ loop.index }}' src="{{ article.image }}" alt="{{ article.title }}">
+                            <h4>{{ article.title }}</h4>
+                            <p>{{ article.intro|raw }}</p>
+                        </a>
+                        {% else %}
+                        <a href="#{{ loop.index+1 }}">
+                            <img id='{{ loop.index }}' src="{{ article.image }}" alt="{{ article.title }}">
+                            <h4>{{ article.title }}</h4>
+                            <p>{{ article.intro|raw }}</p>
+                        </a>
+                        {% endif %}
+                    {% endfor %}
                 </aside>
             </article>
         </section>

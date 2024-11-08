@@ -21,10 +21,13 @@ const ArticleSchema = new Schema({
     category: {
         type: String
     },
-    chapters: [{
+    chapters: {
+        type: Number
+    },
+    chaptersTitles: [{
         type: String
     }],
-    chaptersTitles: [{
+    chaptersContent: [{
         type: String
     }]
 });

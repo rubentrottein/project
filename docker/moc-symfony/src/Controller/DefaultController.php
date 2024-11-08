@@ -36,24 +36,8 @@ class DefaultController extends AbstractController
         //Modified controller (toGit)
         $articles = file_get_contents('http://localhost:3999/api/school/articles');
         $articlesList = json_decode($articles, true);
+        //var_dump($articlesList);
         $lastArticle = end($articlesList);
-        try{
-            if ($security->getUser()) {
-                $articlesList = json_decode($articles, true);
-                $lastArticle = end($articlesList);
-                return $this->render("default/home.html.twig", ['all_content' => $articlesList, 'lastArticle'=> $lastArticle]);
-            } else {
-                //Mise à disposition des 5 derniers articles (démo sans connexion)
-
-                return $this->render("landing.html.twig", ['all_content' => $articlesList]);
-            }
-        } catch (\Exception $exception) {
-            //$error = new Article();
-            //$error->title = $exception->getMessage();
-            //$articlesList = [$error];
-
-            $articlesList = [$exception->getMessage()];
-            return $this->render('landing.html.twig', ['all_content' => $articlesList]);
-        }
+        return $this->render("landing.html.twig", ['articlesList' => $articlesList]);
     }
 }

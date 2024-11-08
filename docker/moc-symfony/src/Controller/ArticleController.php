@@ -9,6 +9,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Contracts\HttpClient\Exception\ClientExceptionInterface;
+use Symfony\Contracts\HttpClient\Exception\DecodingExceptionInterface;
+use Symfony\Contracts\HttpClient\Exception\RedirectionExceptionInterface;
+use Symfony\Contracts\HttpClient\Exception\ServerExceptionInterface;
+use Symfony\Contracts\HttpClient\Exception\TransportExceptionInterface;
 
 class ArticleController extends AbstractController
 {
@@ -50,20 +55,38 @@ class ArticleController extends AbstractController
 
     /**
      * @throws \Exception
-     */
+     *
+{#
     #[Route('/article/{id}', name: 'article_get_one', methods: ['GET'])]
     public function getArticleById(string $id): Response
     {
 
+        $article = $this->articleApiService->fetchArticleById($id);
         try {
-            $article = $this->articleApiService->fetchArticleById($id);
-            //dd($article["image"]);
+            return $this->render('default/test.html.twig',
+                ['post' => $article]);
         } catch (Exception $e) {
+            dd($e);
+        }
+    }
+#}
+     * /**/
+    #[Route('/article/{id}', name: 'article_get_one', methods: ['GET'])]
+    public function displayArticle(string $id) : Response
+    {
+
+        #2
+        //$users = $this-> $userRepository->findAll();
+        $posts = $this->articleApiService->fetchArticles();
+        try {
+            $post = $this->articleApiService->fetchArticleById($id);
+        } catch (Exception|DecodingExceptionInterface|TransportExceptionInterface $e) {
             dd($e->getMessage());
         }
-
-        return $this->render('default/test.html.twig',
-            ['post' => $article]);
+        $message = ['content' => 'Message Flash', 'type' => "success"];
+        return $this->render('default/home.html.twig',
+            ['posts' => $posts, 'message' => $message, 'article' => $post]
+        );
 
     }
 }

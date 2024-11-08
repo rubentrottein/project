@@ -78,17 +78,16 @@ main{
     opacity: .8;
 }
 
-#slider{
-
-}
 /********************** Slider de cours suggérés ******************************/
 
 #slider{
     display: flex;
-    width: 400dvw;
-    overflow-x: hidden;
+    overflow: hidden;
+    width: 200dvw;
     justify-content: space-around;
     height: 60dvh;
+}
+#slider>*{
 }
 #slider img{
     object-fit: cover;
@@ -107,6 +106,7 @@ main{
 }
 .accordion .hidden{
     overflow: hidden;
+    height: 1em;
 }
 .open{
     display: grid;

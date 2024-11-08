@@ -1,0 +1,44 @@
+img{
+    max-width: 100%;
+}
+video{
+    max-width: 100%;
+}
+video:before{
+    content:"▶";
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%);
+    font-size: 3em;
+    opacity: .7;
+}
+main>*{
+    position: relative;
+    top: -10em;
+    background: var(--transparent-white);
+    backdrop-filter: blur(5px);
+}
+#chapterContent{
+    margin: 3em auto;
+    padding: 2em;
+    border-radius: 1em;
+    backdrop-filter: blur(15px);
+    border: 1px solid white;
+    box-shadow: 0 0 6px #00000029;
+}
+#chapterContent h2{
+    margin: 1em 0;
+}
+.chapter-header{
+    flex-direction: column;
+}
+.chapter-header>*{
+    margin-bottom: 1em;
+}
+#comments{
+    padding: 2em;
+    width: 100%;
+    background: var(--transparent-black);
+    color: var(--white);
+}

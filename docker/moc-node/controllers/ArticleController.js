@@ -20,8 +20,7 @@ const getArticleById = async (req, res) => {
         }
 
         const articleId = new mongoose.Types.ObjectId(req.params.id);
-        console.log("ID converti en ObjectId :", articleId); // Vérifier que l'ID est bien converti
-
+       
         const article = await ARTICLE.findById(articleId);
         if (!article) {
             return res.status(404).json({ message: 'Article not found' });
@@ -33,17 +32,6 @@ const getArticleById = async (req, res) => {
         res.status(500).json({ message: 'Error fetching Article', error });
     }
 };
-/*
-const getArticleById = async ( req, res ) =>{
-    try {
-        const articleId = mongoose.Types.ObjectId(req.params.id);
-        const article = await ARTICLE.findById(articleId);
-        res.json( article )
-    } catch ( error ) {
-        res.json( { message: 'Error fetching Articles', error } )
-    }
-}
-    */
 const deleteArticle = async (req, res) => {
     try {
         const articleId = req.params.id; // ID de l'article passé dans les paramètres de l'URL
