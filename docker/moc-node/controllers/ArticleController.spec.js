@@ -8,6 +8,8 @@ describe('createArticle', () => {
     it('should create a new article when title is provided', async () => {
         const articleData = { 
             "title": "Article chapitré",
+            "author": "API",
+            "createdAt": Date.now(),
             "image": "https://picsum.photos/id/138/1980/1280",
             "alt": "Photo d'illustration principale (poster de la vidéo)",
             "intro": "Cet article nous aide a tester les nouvelles entités Articles via l'API. C'est le 3ème. Il est désormais persistant sur la base mongoDB",
@@ -39,7 +41,7 @@ describe('createArticle', () => {
         expect(Article).toHaveBeenCalledTimes(1);
         expect(saveMock).toHaveBeenCalledTimes(1);
         expect(res.json).toHaveBeenCalledWith({ 
-            message: "Nouvel article crée", 
+            message: "Nouvel article créé", 
             summary: expect.any(Object) 
         });
 

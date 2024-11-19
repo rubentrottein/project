@@ -38,6 +38,6 @@ class DefaultController extends AbstractController
         $articlesList = json_decode($articles, true);
         //var_dump($articlesList);
         $lastArticle = end($articlesList);
-        return $this->render("landing.html.twig", ['articlesList' => $articlesList]);
+        return $this->render("landing.html.twig", ['articlesList' => $articlesList, "listLength" => sizeof($articlesList)]);
     }
 }

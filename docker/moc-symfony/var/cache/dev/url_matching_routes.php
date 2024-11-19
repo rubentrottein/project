@@ -16,6 +16,7 @@ return [
         '/_profiler/open' => [[['_route' => '_profiler_open_file', '_controller' => 'web_profiler.controller.profiler::openAction'], null, null, null, false, false, null]],
         '/articles' => [[['_route' => 'default_articles', '_controller' => 'App\\Controller\\ArticleController::articles'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/test' => [[['_route' => 'default_test', '_controller' => 'App\\Controller\\ArticleController::test'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
+        '/create-article' => [[['_route' => 'article_create', '_controller' => 'App\\Controller\\ArticleController::createArticle'], null, ['GET' => 0, 'POST' => 1], null, true, false, null]],
         '/home' => [[['_route' => 'default_home', '_controller' => 'App\\Controller\\DefaultController::home'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
         '/' => [[['_route' => 'default_landing', '_controller' => 'App\\Controller\\DefaultController::landing'], null, ['GET' => 0], null, false, false, null]],
         '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],

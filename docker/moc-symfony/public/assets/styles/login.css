@@ -1,15 +1,19 @@
-
 /* Formulaire de connexion */
-body{
+.formContainer{
+    /* Classe du Body */
     display: grid;
     place-content: center;
-    height:100dvh;
     background: url("https://picsum.photos/1980/1280") fixed no-repeat;
     background-size: cover;
 }
+.loginForm{
+    margin: 3em auto;
+    position: relative;
+    top: -10em;
+}
 form {
     padding: 1em;
-    background: rgba(0,0,0,.4);
+    background: var(--transparent-black);
     border-radius: 1em;
     border: 1px solid gold;
     box-shadow: 0 0 15px black;
@@ -18,13 +22,39 @@ form {
     width: 60dvw;
     text-align: center;
 }
+.clip{
+    display: inline;
+    padding: .3em;
+    text-align: center;
+    border-radius: .5em .5em 0 0;
+    background: var(--transparent-black);
+    font-weight: 100;
+    color: white;
+}
+label{
+    font-weight: 100;
+    font-size: 1.5em;
+}
 label, input{
     display: block;
     margin: 1em auto;
+    min-width: 50%;
+    color: white;
 }
 .checkbox{
     display: flex;
     justify-content: space-around;
     width: 15%;
     margin: auto;
+}
+trix-toolbar{
+    margin-top: 1em;
+}
+trix-toolbar *, trix-editor{
+    background: white;
+    color: var(--black);
+    text-align: left;
+}
+trix-editor{
+    margin: 1em;
 }

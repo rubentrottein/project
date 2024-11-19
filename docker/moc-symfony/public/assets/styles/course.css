@@ -13,9 +13,11 @@ video:before{
     font-size: 3em;
     opacity: .7;
 }
-main>*{
+main{
     position: relative;
     top: -10em;
+}
+section{
     background: var(--transparent-white);
     backdrop-filter: blur(5px);
 }
@@ -38,7 +40,8 @@ main>*{
 }
 #comments{
     padding: 2em;
-    width: 100%;
+    width: 95%;
     background: var(--transparent-black);
     color: var(--white);
+    border: deepskyblue 1px solid;
 }

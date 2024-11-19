@@ -4,6 +4,13 @@
 :root{
     --pure-glass : radial-gradient(rgba(255,255,255,.1), lightsteelblue);
 }
+
+.edu-font {
+    font-family: "Edu AU VIC WA NT Pre", "Montserrat";
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
 video{
     z-index: -1;
     position: absolute;
@@ -66,10 +73,11 @@ nav a{
     } to {
         transform: translateX(0);
     }
-
 }
-/************ Site vitrine ***********/
+
+/************ Layout Vitrine ***********/
 main{
+    overflow-x: hidden;
     margin-top: 95dvh;
     background: rgba(0,0,0,.5);
     border-radius: 1em;
@@ -78,27 +86,27 @@ main{
     opacity: .8;
 }
 
-/********************** Slider de cours suggérés ******************************/
+/****** Slider de cours suggérés *******/
 
-#slider{
+.accordion #slider{
     display: flex;
-    overflow: hidden;
-    width: 200dvw;
-    justify-content: space-around;
+    width: 320dvw;
     height: 60dvh;
 }
-#slider>*{
-}
 #slider img{
-    object-fit: cover;
-    height: 50vh;
+    object-fit: contain;
+    max-height: 50vh;
+    width: 80dvw;
+    margin: auto;
 }
 #slider a{
     color:var(--white);
+    width: 90%;
 }
 
-/* accordion */
+/* accordion *
 .accordion{
+    overflow: hidden;
     display: grid;
     padding: 1.5em;
     cursor:pointer;

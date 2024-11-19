@@ -15,15 +15,16 @@
                         </div>
                 {% else %}
                         <ul class="articles">
-                                {% for article in articles %}
-                                        <a href="{{ path('article_get_one', {id:article._id}) }}">
-                                                <figure>
-                                                        <img src="{{ article.image }}" alt="Illustration" />
-                                                        <h4> {{ article.title }} </h4>
-                                                </figure>
-                                        </a>
-                                {% endfor %}
+                        {% for article in articles %}
+                                <a href="{{ path('article_get_one', {id:article._id}) }}">
+                                        <figure>
+                                                <img src="{{ article.image }}" alt="Illustration" />
+                                                <h4> {{ article.title }} </h4>
+                                        </figure>
+                                </a>
+                        {% endfor %}
                         </ul>
                 {% endif %}
         </section>
+        <a href="{{ path('article_create') }}" type="button" class="newItem">➕ Nouvel article</a>
 {% endblock %}

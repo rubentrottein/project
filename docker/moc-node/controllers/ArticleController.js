@@ -50,17 +50,25 @@ const deleteArticle = async (req, res) => {
 
 const createArticle = async (req, res) =>{
     try {
-        const newArticle = new ARTICLE();
-        newArticle.title = req.body.title;
-        if(req.body.image) newArticle.image = req.body.image;
-        if(req.body.category) newArticle.category = req.body.category;
-
-        await newArticle.save()
+        const newArticle = new ARTICLE({
+            title: req.body.title,
+            author: req.body.author,
+            image: req.body.image,
+            alt: req.body.alt,
+            intro: req.body.intro,
+            content: req.body.content,
+            category: req.body.category,
+            chapters: req.body.chapters,
+            chaptersTitles: req.body.chaptersTitles,
+            chaptersContent: req.body.chaptersContent
+        });
+    
+        await newArticle.save();
         
-        res.json( { "message" : "Nouvel article crée" , "summary" : {text: newArticle.title} } )
+        res.json({ "message": "Nouvel article créé", "summary": { text: newArticle.title } });
     } catch (error) {
-        res.json( { "message": "Erreur dans la création d'un article", "error" : error } )
-    }
+        res.json({ "message": "Erreur dans la création d'un article", "error": error });
+    }    
 }
 
 
