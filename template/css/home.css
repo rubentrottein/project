@@ -1,6 +1,6 @@
 *{
-    overflow-x: hidden;
     scroll-behavior: smooth;
+    text-decoration: none;
 }
 video{
     z-index: -1;
@@ -17,6 +17,7 @@ header{
     align-items: center;
     position: fixed;
     width: 100%;
+    z-index: 10;
 }
 h1{
     font-weight: 100;
@@ -40,11 +41,10 @@ main{
     border-radius: 1em;
     color: white;
     backdrop-filter: blur(15px);
-
 }
 
 
-/********************** Slider de cours suggérés ******************************/
+/***** Slider de cours suggérés *****/
 
 #slider{
     display: flex;
@@ -53,13 +53,16 @@ main{
     justify-content: space-around;
     height: 50dvh;
 }
+main{
+    overflow: hidden;
+}
 #slider img{
     object-fit: cover;
-    width: 100%;
+    max-width: 81%;
 }
 
 
-/********************** Modale de connexion ******************************/
+/***** Modale de connexion *****/
 .modal{
     display: none;
     position: fixed;
@@ -119,4 +122,39 @@ main{
 }
 .visible{
     display: grid;
+}
+
+
+#hero{
+    position:absolute;
+    top:50dvh;
+    left: 50dvw;
+    transform: translate(-50%, -50%);
+    background: #ffffff44;
+    backdrop-filter: blur(10px);
+    border-radius: 1em;
+    padding: 1em;
+    display: grid;
+    place-content: center;
+    min-width: 50dvw;
+    height: 50dvh;
+    text-align: center;
+}
+#hero h1{
+    color: gold;
+}
+#hero p{
+    font-size: 1.5em;
+    color: white;
+}
+#hero p:nth-child(1){transform: translate(-6em);}
+#hero p:nth-child(3){transform: translate(6em);}
+#hero [type="button"], #hero button{
+    margin: 2em auto;
+}
+#hero article{
+    min-width: 50dvw;
+}
+body{
+    background: url("../media/images/abstract-4643978.jpg") fixed;
 }

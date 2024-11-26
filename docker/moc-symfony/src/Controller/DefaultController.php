@@ -81,7 +81,7 @@ class DefaultController extends AbstractController
     }
 
     #[Route('/profile', name: 'user_test', methods: ['GET'])]
-    public function test () : Response
+    public function profile () : Response
     {
 
         #2

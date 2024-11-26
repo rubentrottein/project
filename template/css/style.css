@@ -1,15 +1,20 @@
+@font-face {
+  font-family: "Caveat";
+  src: url("../../docker/moc-symfony/assets/Caveat/Caveat-VariableFont_wght.ttf");
+}
 *{
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Caveat";
   margin: 0;
   text-decoration: none;
 }
+
 :root{
   --white : #fee;
   --black : #233;
   --beige : beige;
   --title : gold;
 }
-
+h1{ font-weight: 100; font-family: monospace;}
 header{
   position: fixed;
   display: flex;
@@ -21,9 +26,11 @@ header{
   width: 100%;
   margin: auto;
 }
+
 header>*{
   padding: 0 1em;
 }
+
 header nav{
   display: flex;
   justify-content: space-between;
@@ -31,20 +38,25 @@ header nav{
   width: 25%;
   text-align: center;
 }
+
 header nav a {
-  display: grid;
-  place-content: center;
+  display: flex;
+  gap: 1em;
+  text-decoration: none;
+  color: royalblue;
   width: 100%;
   height: 100%;
   transition: 1s;
-
 }
+
 header nav a:hover{
   background: #1D9AF244;
 }
+
 img{
   width: 100%;
 }
+
 main{
   padding: 1em;
   width: 80%;
@@ -68,6 +80,7 @@ main{
   padding: .5em;
   margin: 1em;
 }
+
 .headlines img{
   display: block;
   width: 10%;
@@ -88,10 +101,12 @@ main{
           calc(-1*var(--r)) 100%/100% var(--r) repeat-x,
           conic-gradient(#000 0 0) padding-box;
 }
+
 .rounded-tab.left {
   border-left-width: 0;
   border-top-left-radius: var(--r);
 }
+
 .rounded-tab.right {
   border-right-width: 0;
   border-top-right-radius: var(--r);
@@ -107,9 +122,8 @@ main{
   background: var(--black);
 }
 
-#tabs{
-  display: flex;
-}
+#tabs{ display: flex; }
+
 #tabs div{
   position: relative;
   z-index: -1;
@@ -125,15 +139,18 @@ main{
   border: 1px solid white;
   border-radius: 10px;
 }
+
 #articleHeader, #articleHeader article{
   display: flex;
   justify-content: space-between;
 }
+
 #articleHeader>div{
   padding: 2em;
   max-width: 45%;
   border-right: 1px solid white;
 }
+
 #articleHeader .miniatures video{
   max-width: 12%;
 }
@@ -145,9 +162,9 @@ footer{
   padding: 1em;
 }
 
-/*Test Bibliothèques*/
+/* Test Bibliothèques */
+/* CSSWAND */
 
-/*CSSWAND*/
 button {
   display: inline-block;
   position: relative;
@@ -159,15 +176,14 @@ button {
   cursor: pointer;
   height: 32px;
   font-size: 14px;
-
 }
+
 button:active {
   box-shadow: 0 3px 0 #1D9AF2;
   top: 3px;
 }
 
-
-/*  Catto CSS */
+/* Catto CSS */
 .flicker {
   animation-name: flicker;
   animation-duration: 1s;
