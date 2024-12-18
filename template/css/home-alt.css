@@ -1,0 +1,421 @@
+:root{
+    /* UX */
+    --link : #ffd700;
+    --buttons : RebeccaPurple;
+
+    /* Alertes */
+    --info : dodgerblue;
+    --success : #1a7b69;
+    --danger : rgb(187, 68, 48);
+    --warning : #f3dfa2; 
+
+    /* Noirs et blancs */
+    --steelgray: #948b8b;
+    --raisinblack: rgb(35, 31, 32);
+    --linen: rgb(239, 230, 221);
+    --whitesmoke :  #f9f9f9;
+}
+
+@font-face {
+    font-family: "Caveat";
+    src: url("../../docker/moc-symfony/assets/Caveat/Caveat-VariableFont_wght.ttf");
+}
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Caveat";
+    font-family: "Montserrat","Edu AU VIC WA NT Pre",'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+mark{background: var(--warning); padding: 0.2rem;}
+body{
+    margin: 0;
+    background: url("../media/images/abstract-4643978.jpg");
+    background-position: bottom;
+}
+body, main{
+    transition: background-position linear 1s;
+    background: url("../media/images/abstract-4643978.jpg");
+    background-position: bottom;
+}
+h1, h2, h3{    
+    font-family: "Edu AU VIC WA NT Pre", "Montserrat", cursive;
+}
+header{
+    display: flex;
+    background: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    z-index: 1;
+    backdrop-filter: invert(75%);
+    background: var(--linen);
+}
+header nav{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+header nav a {
+    text-decoration: none;
+    transition: 1s;
+    color: var(--info);
+}
+header img{
+    max-height: 3em;
+}
+video{
+    /**/
+    display: none;
+    /**/
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    z-index: -1;
+}
+
+
+.button{
+    border: none;
+    border-radius: .5rem;
+    padding: 1rem;
+    font-size: 1.1rem;
+    color: var(--linen);
+    background: var(--buttons);
+    margin: .5rem;
+}
+[type=button]{
+    border: 1px solid var(--buttons);
+    background: none;
+    padding: 1rem;
+    margin: .5rem;
+    color: var(--buttons);
+}
+
+
+/********** Hero Section **********/
+#hero{
+    background: radial-gradient(rgba(255, 255, 255, 0.4), rgba(102, 51, 153, 0.473));
+    min-width: 50dvw;
+    margin: 20vh auto;
+    border-radius: 1rem;
+    padding: 1rem;
+    display: grid;
+    place-content: center;
+    backdrop-filter: blur(3px);
+}
+#hero h1, div{
+    text-align: center;
+}
+#hero a {
+    color: var(--link);
+}
+/* Animation d'accueil */
+#hero p{
+    font-size: 3rem;
+    transform: translateX(-100dvw);
+    animation: fadeIn 1s 1s forwards ease;
+    color: var(--buttons);
+}
+#hero p:nth-child(2){color: var(--success);margin-left: 4rem; animation: fadeIn 1s 2s forwards ease; }
+#hero p:nth-child(3){color: var(--danger);margin-left: 6rem; animation: fadeIn 1s 3s forwards ease; }
+
+@keyframes fadeIn{
+    from{
+        transform: translateX(-100dvw);
+    } to {
+        transform: translateX(0);
+    }
+}
+
+main{
+    padding: 3rem auto;
+    position:relative;
+}
+section{
+    transform: translateY(-10vh);
+    width: 90%;
+    background: var(--whitesmoke);
+    box-shadow: 0 0 15px;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 1rem auto;
+}
+section:nth-child(even) {
+    background-color: var(--whitesmoke);
+    text-align: right;
+}
+img{
+    max-width: 100%;
+}
+main section{
+    margin-top: 10rem;
+}
+
+
+
+/***** Searchbar *****/
+#searchbar{
+    position: sticky;
+    z-index: 1;
+    top:6rem;
+    left:0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#searchbar form{
+    width: 80%;
+}
+#searchbar input{
+    font-size: 1.2rem;
+    padding: .5rem 1rem;
+    border:none;
+    border-radius: 1rem 0 0 1rem;
+    background: rgba(102, 51, 153, 0.485);
+    color: var(--linen);
+}
+#searchbar [type=search]{
+    min-width: 60%;
+}
+#searchbar [type=submit]{
+    border-radius: 0 1rem 1rem 0;
+    background: rgba(102, 51, 153, 0.7);
+}
+
+.darkMode #searchbar { background: var(--raisinblack);}
+
+/***** Slider / cards de cours suggérés *****/
+#latest{
+    min-height: 80dvh;
+}
+#latest aside{
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+    min-height: 50dvh;
+}
+#latest a{
+    color: var(--raisinblack);
+    text-decoration: none;
+}
+.darkMode #latest a { color: var(--linen);}
+#latest img{
+    object-fit: cover;
+    max-width: 100%;
+}
+
+#latest figure{
+    border: var(--buttons) 1px solid;
+    padding: 0;
+}
+#latest figcaption{
+    padding: 1rem;
+}
+/* about */
+#about{
+    width: 80%;
+    background: rgba(102, 51, 153, 0.485);
+    color: var(--linen);
+    text-align: center;
+}
+#about p{
+    font-size: 1.3rem;
+}
+/******* Fonctionnalités *******/
+#features{
+    padding: 1em;
+}
+#features ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    text-align: center;
+}
+#features div{
+    font-size: 3rem;
+}
+
+#features li{
+    display: grid;
+    place-content: center;
+    width: 30dvmin;
+    height: 30dvmin;
+    background: var(--buttons);
+    color: var(--linen);
+    border-radius: 50%;
+    padding: 1.5rem;
+    margin: 1em auto;
+}
+/* Testimonies */
+#testimonials *{
+    transform: translateX(0);
+    transition: transform 1s;
+}
+#testimonials article{
+    overflow: hidden;
+    min-width: 80vw;
+    margin: auto;
+    min-height: 50vh;
+    display: grid;
+    place-content: center;
+}
+#testimonials figure {
+    display: flex;
+    z-index: 100;
+    gap: 1rem;
+    width: 80vw;
+    margin: 1rem;
+    text-align: center;
+    font-style: italic;
+    font-size: 1.5rem;
+    border-radius: .5rem;
+}
+#testimonials img {
+    width: 10%;
+    border-radius: 50%;
+}
+.darkMode #testimonials figure{ background: none;}
+
+/* statistiques */
+#stats{
+    display: flex;
+    flex-wrap: wrap;
+    grid-template-areas: "a a", "b b";
+    padding: 0;
+}
+#stats h2{
+    background: url("../media/images/dice-167847_1920.jpg") center/cover;
+    font-size: 3rem;
+    color: rebeccapurple;
+}
+#stats>*{
+    text-align: center;
+    display: grid;
+    place-content: center;
+    min-width: 50%;
+    min-height: 15dvh;
+    padding: 1rem;
+    margin: 0;
+}
+#stats div span{font-size: 4rem;}
+#stats div:nth-child(2){background: url("../media/images/green-4274302_1920.jpg") center/cover;}
+#stats div:nth-child(3){background: url("../media/images/colored-pencil-3985281_1920.jpg") center/cover;}
+#stats div:nth-child(4){background: url("../media/images/flowers-6546093_1920.jpg") center/cover;}
+#stats div:nth-child(3), #stats div:nth-child(4){color: white; text-shadow: 0 0 15px white;}
+
+/* Formulaire de contact */
+#contact{margin-bottom: 20vh;}
+#contact h2{
+    text-align: center;
+    font-family: "Montserrat";
+    font-weight: 200;
+    font-size: 2rem;
+}
+#contact form{
+    min-width: 50%;
+    margin: 1rem auto;
+    text-align: center;
+}
+#contact input, #contact textarea{
+    display: block;
+    min-width: 80%;
+    margin: 1rem auto;
+    border-color:rgba(78, 77, 77, 0.224);
+    border-radius: 1px;
+}
+#contact label{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+#contact textarea{
+    resize: none;
+    min-height: 7rem;
+}
+.darkMode #contact{background: var(--raisinblack)}
+
+
+/**/
+footer{
+    text-align: center;
+    background: black;
+    color: white;
+    padding: 1rem;
+    margin: 0;
+    position: fixed;
+    bottom: 0;
+    left: -25vw;
+    border-radius: 0 1rem 0 0;
+    width: 25vw;
+    transition: left 1s;
+}
+.callToAction{
+    display: flex;
+    justify-content: space-around;
+}
+footer .callToAction [type=button]{
+    border: 1px var(--link) solid;
+    color: var(--link);
+    background: black;
+}
+
+#hero .responsive p{display: none;}
+@media screen and (max-width:700px){
+    *{
+        flex-direction: column;
+        justify-content: space-between;    
+        margin: 0;
+        text-align: center;
+        max-width: 100%;
+    }
+    nav{
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .btn-container{width: 100%;}
+    #features li{
+        width: 30dvmax;
+        height: 30dvmax;
+    }
+    #testimonials img{
+        /*
+        width: 40vmin;
+        height: 40vmin;
+        */
+        min-height: 80vmin;
+        min-width: 80vmin;
+        display: block;
+        margin: 1rem auto;
+    }
+    #searchbar, footer{
+        position: static;
+    }
+    #hero{
+        max-height: 200vh;
+    }
+    #hero p{
+        display: none;
+        margin-left: 0;
+        text-align: center;
+    }
+    #hero .responsive{
+        display: block;
+    }
+    footer{
+        position: fixed;
+        opacity:0;
+        bottom:0;
+        left: 0;
+        min-width: 100%;
+        border-radius: 0;
+        min-height: 15vh;
+    }
+    .btn-container{
+        flex-direction: row;
+    }
+    ul{
+        padding: 0;
+    }
+}
