@@ -5,7 +5,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a96d6abf-c97b-4318-8972-390d80279dca" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/styles/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/styles/app.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/styles/course.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/assets/styles/course.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/assets/styles/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/ArticleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/RegistrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/RegistrationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Form/ArticleFormType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Form/ArticleFormType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/components/_flash.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/_flash.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/components/header.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/components/header.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/default/home.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/default/home.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/registration/register.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/registration/register.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/profile.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/profile.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/profiler/index.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/url_generating_routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/url_generating_routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/cache/dev/url_matching_routes.php" beforeDir="false" afterPath="$PROJECT_DIR$/var/cache/dev/url_matching_routes.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/var/log/dev.log" beforeDir="false" afterPath="$PROJECT_DIR$/var/log/dev.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../documentation/Dossier de projet.docx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../documentation/Dossier professionnel.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../documentation/Dossier professionnel.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../documentation/Dossier projet dan.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../documentation/Dossier projet dan.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../documentation/cahier-des-charges.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../../documentation/cahier-des-charges.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modelisation/JMeriseEtudiant/lib/actDesk.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../modelisation/JMeriseEtudiant/lib/actDesk.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../modelisation/schoolUml.mdj" beforeDir="false" afterPath="$PROJECT_DIR$/../../modelisation/schoolUml.mdj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../template/css/profile.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../template/css/profile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../template/index_alt.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../template/index_alt.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -290,6 +317,11 @@
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
       <path value="$PROJECT_DIR$/vendor/symfonycasts/verify-email-bundle" />
       <path value="$PROJECT_DIR$/vendor/dama/doctrine-test-bundle" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-factory" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/symfony/html-sanitizer" />
+      <path value="$PROJECT_DIR$/vendor/league/uri" />
+      <path value="$PROJECT_DIR$/vendor/league/uri-interfaces" />
     </include_path>
   </component>
   <component name="ProjectColorInfo">{
@@ -301,21 +333,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;dev-october&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/SecondarySSD/2024_projet/docker/moc-symfony&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "dev-october",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "D:/SecondarySSD/.def_hedgehog-school",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\SecondarySSD\2024_projet\docker\moc-symfony\public\assets" />
@@ -351,6 +383,8 @@
       <workItem from="1731090959310" duration="739000" />
       <workItem from="1731400815309" duration="38128000" />
       <workItem from="1731989654402" duration="1288000" />
+      <workItem from="1733140897802" duration="12291000" />
+      <workItem from="1733758065941" duration="70000" />
     </task>
     <servers />
   </component>

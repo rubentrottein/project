@@ -1,12 +1,12 @@
 {% extends "layout.html.twig" %}
 {% block final_stylesheets %}
+    <style>/* body{ background:url({{ asset('assets/hedgehog.jpg') }})fixed no-repeat;} */</style>
     <link rel="stylesheet" href="{{ asset('assets/styles/course.css') }}">
-    <style> body{ background:url({{ asset('assets/hedgehog.jpg') }})fixed no-repeat;}</style>
 {% endblock %}
 {% block content %}
 <section id="articleHeader">
     <div>
-        <video src="https://mistertea.fr/selene/video/placeholder.mp4" poster="{{ article.image }}"></video>
+        <video src="{{ asset("media/bg.mp4") }}" poster="{{ article.image }}"></video>
         <article>
             <h3>Video title</h3>
             <p>Description de la vidéo</p>

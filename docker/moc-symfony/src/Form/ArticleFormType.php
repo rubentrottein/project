@@ -2,13 +2,16 @@
 
 namespace App\Form;
 
+use http\Env\Request;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\HtmlSanitizer\HtmlSanitizerInterface;
 
 class ArticleFormType extends AbstractType
 {
@@ -59,5 +62,15 @@ class ArticleFormType extends AbstractType
             // Pas de modèle de données pour ce formulaire
             'data_class' => null,
         ]);
+    }
+
+    // ...
+
+    public function createArticle(HtmlSanitizerInterface $htmlSanitizer, Request $request): Response
+    {
+        $unsafeContents = $request->getPayload()->get('post_contents');
+
+        $safeContents = $htmlSanitizer->sanitize($unsafeContents);
+        // ... proceed using the safe HTML
     }
 }

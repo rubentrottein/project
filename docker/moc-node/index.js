@@ -21,5 +21,4 @@ app.listen(3999, () => {
     console.log("🚀🚀 Lancement avec succès du serveur");
 });
 
-
 module.exports = app

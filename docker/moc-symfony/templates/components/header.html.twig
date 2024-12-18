@@ -16,8 +16,8 @@
     </div>
     {% if not app.user %}
     <div>
-        <button class="connexion">Connexion</button>
-        <button>Inscription</button>
+        <a type="button" class="button connexion" href="{{ path('app_login')}}">Connexion</a>
+        <a type="button" class="button register" href="{{ path('app_register')}}">Inscription</a>
     </div>
     {% else %}
         <p>Bienvenue {{ app.user.username }}</p>

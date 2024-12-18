@@ -1,0 +1,74 @@
+Dictionnaire de donn?es 
+
+----------------
+Users
+----------------
+
+Nom : username
+Code : USERNAME
+Type : VARCHAR
+Taille : 50,
+Commentaire : 
+
+Nom : id_user
+Code : ID_USER
+Type : INT
+Taille : ,
+Commentaire : 
+
+Nom : email
+Code : EMAIL
+Type : VARCHAR
+Taille : 75,
+Commentaire : 
+
+Nom : password
+Code : PASSWORD
+Type : VARCHAR
+Taille : 75,
+Commentaire : 
+
+Nom : roles
+Code : ROLES
+Type : VARCHAR
+Taille : 75,
+Commentaire : 
+
+Nom : id_comment
+Code : ID_USER
+Type : INT
+Taille : ,
+Commentaire : 
+
+--------------
+Ratings
+--------------
+
+Nom : id_rating
+Code : USERNAME
+Type : INT
+Taille : ,
+Commentaire : 
+
+Nom : rating
+Code : RATINGS_LIST
+Type : INT
+Taille : 50,
+Commentaire : 
+
+--------------
+Comments
+--------------
+
+Nom : comment
+Code : COMMENT
+Type : TEXT
+Taille : ,
+Commentaire : 
+
+Nom : id_course
+Code : COURSES
+Type : INT
+Taille : ,
+Commentaire : 
+

@@ -92,7 +92,6 @@ class ArticleController extends AbstractController
         return $this->render('default/home.html.twig',
             ['posts' => $posts, 'message' => $message, 'article' => $post]
         );
-
     }
 
     /**
